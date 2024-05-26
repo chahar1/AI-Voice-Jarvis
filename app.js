@@ -4,8 +4,8 @@ function speak(text) {
     const text_speak = new SpeechSynthesisUtterance(text);
 
     text_speak.rate = 1;
-    text_speak.volume = 1;
-    text_speak.pitch = 1.5;
+    text_speak.volume = 8;
+    text_speak.pitch = 3;
 
     window.speechSynthesis.speak(text_speak);
 }
@@ -45,7 +45,7 @@ function takeCommand(message) {
     if (message.includes('hey') || message.includes('hello')) {
         speak("Hello Sir, How May I Help You?");
 
-    } if (message.includes('Tell about yourself') || message.includes('Who are you') {
+    } if (message.includes('Tell about yourself')) {
         speak("Dear sir ! I am Javis.I give the answer that you ask me. I am developed by Shoryan Chahar.");
     } else if (message.includes("open google")) {
         window.open("https://google.com", "_blank");
